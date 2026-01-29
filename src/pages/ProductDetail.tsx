@@ -83,16 +83,16 @@ const ProductDetail = () => {
                 {product.description}
               </p>
 
-              {/* Add to Cart */}
+              {/* Contact Us Section */}
               <div className="space-y-4">
-                <button className="w-full btn-gold text-center">
-                  Add to Collection
-                </button>
+                <a 
+                  href="/contact" 
+                  className="w-full btn-gold text-center block py-3 rounded-md transition-all"
+                >
+                  Contact Us
+                </a>
+                
                 <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
-                  <span className="flex items-center gap-2">
-                    <Truck className="w-4 h-4" />
-                    Free shipping to NY
-                  </span>
                   <span className="flex items-center gap-2">
                     <Shield className="w-4 h-4" />
                     2-year warranty
@@ -149,20 +149,13 @@ const ProductDetail = () => {
                       "{product.curatorNote}"
                     </p>
                     <p className="text-gold text-sm mt-4">
-                      — Karin Grosnick
+                      — Kiani marie Rodriguez
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Shipping Info */}
-              <div className="text-sm text-muted-foreground">
-                <p>
-                  <strong className="text-charcoal">Shipping to New York:</strong>{" "}
-                  Complimentary white-glove delivery within the Syracuse area. 
-                  Contact us for delivery estimates to other locations.
-                </p>
-              </div>
             </motion.div>
           </div>
         </div>

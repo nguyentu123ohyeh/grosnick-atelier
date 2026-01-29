@@ -91,9 +91,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-charcoal mb-1">Address</h3>
                     <p className="text-charcoal-light">
-                      Chestnut Street 118
+                      San Paulo Way 911
                       <br />
-                      Syracuse, NY 13212
+                      Kissimmee Florida 34758
                     </p>
                   </div>
                 </div>
@@ -108,7 +108,7 @@ const Contact = () => {
                       href="tel:+15042257457"
                       className="text-charcoal-light hover:text-gold transition-colors"
                     >
-                      +1 (504) 225-7457
+                      +1 (903) 650-0778
                     </a>
                   </div>
                 </div>
@@ -120,10 +120,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-charcoal mb-1">Email</h3>
                     <a
-                      href="mailto:wlzdcskr15730@hotmail.com"
+                      href="mailto:leidyconkeluzt@hotmail.com"
                       className="text-charcoal-light hover:text-gold transition-colors break-all"
                     >
-                      wlzdcskr15730@hotmail.com
+                      leidyconkeluzt@hotmail.com
                     </a>
                   </div>
                 </div>
@@ -155,7 +155,7 @@ const Contact = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Grosnick Atelier Location"
+                  title="Kiani Atelier Location"
                   className="grayscale"
                 />
               </div>

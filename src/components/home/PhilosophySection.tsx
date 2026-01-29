@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import karinImage from "@/assets/karin-portrait.jpg";
+// Sửa import ảnh thành kiana.jpg
+import kianaImage from "@/assets/kiana.jpg";
 
 export function PhilosophySection() {
   return (
@@ -16,12 +17,11 @@ export function PhilosophySection() {
           >
             <div className="aspect-[4/5] relative overflow-hidden">
               <img
-                src={karinImage}
+                src={kianaImage} // Sử dụng kiana.jpg
                 alt="Karin Grosnick"
                 className="w-full h-full object-cover grayscale"
               />
             </div>
-            {/* Decorative element */}
             <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-gold hidden lg:block" />
           </motion.div>
 
@@ -40,20 +40,15 @@ export function PhilosophySection() {
             </h2>
             
             <div className="space-y-6 text-charcoal-light leading-relaxed">
-              <p className="text-lg">
+              <p className="text-lg italic">
                 "A home should be a reflection of the life lived within it—a 
                 sanctuary that nurtures the spirit while inspiring the everyday."
               </p>
               <p>
-                At Grosnick Interior Atelier, we believe that exceptional spaces 
+                At **Grosnick Interior Atelier**, we believe that exceptional spaces 
                 emerge from the thoughtful curation of objects that carry meaning. 
                 Each piece in our collection is selected not merely for its form, 
                 but for its capacity to contribute to the narrative of your home.
-              </p>
-              <p>
-                We work with artisans across the globe who share our commitment 
-                to quality, sustainability, and the preservation of traditional 
-                craftsmanship in a modern context.
               </p>
             </div>
 

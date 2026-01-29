@@ -41,7 +41,7 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex flex-col">
             <span className="font-heading text-2xl md:text-3xl tracking-wide text-charcoal">
-              GROSNICK
+              Kiani
             </span>
             <span className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">
               Interior Atelier
@@ -138,15 +138,15 @@ export function Header() {
                     Visit Our Atelier
                   </p>
                   <p className="text-sm text-charcoal">
-                    Chestnut Street 118
+                    San Paulo Way 911
                     <br />
-                    Syracuse, NY 13212
+                    Kissimmee Florida 34758
                   </p>
                   <a
                     href="tel:+15042257457"
                     className="block mt-4 text-sm text-gold hover:text-gold-dark transition-colors"
                   >
-                    +1 (504) 225-7457
+                    +1 (903) 650-0778
                   </a>
                 </div>
               </div>

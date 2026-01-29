@@ -25,7 +25,7 @@ export function Footer() {
             </h3>
             <p className="text-cream/70 mb-8">
               Receive curated design inspiration, exclusive previews, and insights
-              from Karin Grosnick directly to your inbox.
+              from Kiani marie Rodriguez directly to your inbox.
             </p>
             {isSubscribed ? (
               <p className="text-gold text-lg">
@@ -62,7 +62,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-6">
-              <span className="font-heading text-2xl tracking-wide">GROSNICK</span>
+              <span className="font-heading text-2xl tracking-wide">Kiani</span>
               <span className="block text-[10px] tracking-[0.3em] uppercase text-cream/60 mt-1">
                 Interior Atelier
               </span>
@@ -120,9 +120,9 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
                 <span className="text-cream/70 text-sm">
-                  Chestnut Street 118
+                  San Paulo Way 911
                   <br />
-                  Syracuse, NY 13212
+                  Kissimmee Florida 34758
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -131,16 +131,16 @@ export function Footer() {
                   href="tel:+15042257457"
                   className="text-cream/70 hover:text-gold transition-colors text-sm"
                 >
-                  +1 (504) 225-7457
+                  +1 (903) 650-0778
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-gold flex-shrink-0" />
                 <a
-                  href="mailto:wlzdcskr15730@hotmail.com"
+                  href="mailto:leidyconkeluzt@hotmail.com"
                   className="text-cream/70 hover:text-gold transition-colors text-sm break-all"
                 >
-                  wlzdcskr15730@hotmail.com
+                  leidyconkeluzt@hotmail.com
                 </a>
               </li>
             </ul>
@@ -152,7 +152,7 @@ export function Footer() {
       <div className="border-t border-charcoal-light/30">
         <div className="container-luxury py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-cream/50 text-xs">
-            © {new Date().getFullYear()} Grosnick Interior Atelier. All rights reserved.
+            © {new Date().getFullYear()} Kiani Interior Atelier. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a
