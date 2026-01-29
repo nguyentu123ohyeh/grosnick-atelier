@@ -18,7 +18,7 @@ export function PhilosophySection() {
             <div className="aspect-[4/5] relative overflow-hidden">
               <img
                 src={kianaImage} // Sử dụng kiana.jpg
-                alt="Karin Grosnick"
+                alt="Kiani marie Rodriguez"
                 className="w-full h-full object-cover grayscale"
               />
             </div>
@@ -54,7 +54,7 @@ export function PhilosophySection() {
 
             <div className="mt-10 pt-10 border-t border-border">
               <p className="font-heading text-2xl text-charcoal italic">
-                Karin Grosnick
+                Kiani marie Rodriguez
               </p>
               <p className="text-muted-foreground text-sm mt-1">
                 Founder & Lead Curator

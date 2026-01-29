@@ -20,7 +20,7 @@ const About = () => {
               The Visionary
             </span>
             <h1 className="font-heading text-5xl md:text-6xl text-charcoal mt-4 mb-6">
-              Meet Karin Grosnick
+              Meet Kiani marie Rodriguez
             </h1>
             <p className="text-muted-foreground text-lg">
               A journey from classical art history to contemporary interior curation
@@ -44,7 +44,7 @@ const About = () => {
               <div className="aspect-[3/4] overflow-hidden">
                 <img
                   src={karinPortrait} // Sử dụng kiana.jpg
-                  alt="Karin Grosnick"
+                  alt="Kiani marie Rodriguez"
                   className="w-full h-full object-cover grayscale"
                 />
               </div>
@@ -68,7 +68,7 @@ const About = () => {
               
               <div className="space-y-4 text-charcoal-light leading-relaxed">
                 <p>
-                  **Karin Grosnick's** path to becoming Syracuse's most sought-after 
+                  **Kiani marie Rodriguez's** path to becoming Syracuse's most sought-after 
                   interior curator began in the hallowed halls of the Metropolitan 
                   Museum of Art, where she spent a decade studying the intersection 
                   of art, design, and human emotion.
@@ -97,7 +97,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Rest of the component (The Craft, Values, etc.) remains same but with Karin Grosnick context */}
+      {/* Rest of the component (The Craft, Values, etc.) remains same but with Kiani marie Rodriguez context */}
       {/* ... */}
     </Layout>
   );
