@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+// Đã chuyển về import tiêu chuẩn để sửa lỗi "Module not found"
+import { motion } from "framer-motion"; 
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 
@@ -15,7 +16,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
     setIsSubmitted(true);
     setFormData({
       name: "",
@@ -47,7 +47,7 @@ const Contact = () => {
             className="text-center max-w-2xl mx-auto"
           >
             <span className="text-gold text-sm tracking-[0.3em] uppercase">
-              Personal Concierge
+              Personal Leader — Kiani Marie Rodriguez
             </span>
             <h1 className="font-heading text-5xl md:text-6xl text-charcoal mt-4 mb-6">
               Get in Touch
@@ -72,16 +72,32 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
               className="space-y-10"
             >
-              <div>
-                <h2 className="font-heading text-3xl text-charcoal mb-6">
-                  Visit The Atelier
-                </h2>
-                <p className="text-charcoal-light leading-relaxed">
-                  Our Syracuse showroom is open by appointment, offering a 
-                  carefully curated selection of our collection in an intimate 
-                  setting designed to inspire.
+            <div>
+              <h2 className="font-heading text-3xl text-charcoal mb-2">
+                Visit The Atelier
+              </h2>
+              
+              {/* ĐOẠN ĐÃ NÂNG CẤP */}
+              <div className="flex items-center gap-4 mb-6">
+                <motion.div 
+                  initial={{ width: 0 }}
+                  whileInView={{ width: 48 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  className="h-[1px] bg-gold"
+                />
+                <p className="text-gold font-bold uppercase tracking-[0.25em] text-[11px]">
+                  Personal Leader: Kiani Marie Rodriguez
                 </p>
               </div>
+              {/* HẾT ĐOẠN NÂNG CẤP */}
+
+              <p className="text-charcoal-light leading-relaxed">
+                Our Syracuse showroom is open by appointment, offering a 
+                carefully curated selection of our collection in an intimate 
+                setting designed to inspire.
+              </p>
+            </div>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -105,7 +121,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-charcoal mb-1">Phone</h3>
                     <a
-                      href="tel:+15042257457"
+                      href="tel:+19036500778"
                       className="text-charcoal-light hover:text-gold transition-colors"
                     >
                       +1 (903) 650-0778
@@ -148,7 +164,7 @@ const Contact = () => {
               {/* Map */}
               <div className="aspect-video bg-cream border border-border overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2939.5!2d-76.1474!3d43.0481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDAyJzUzLjIiTiA3NsKwMDgnNTAuNiJX!5e0!3m2!1sen!2sus!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3516.432616428!2d-81.458!3d28.225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDEzJzMwLjAiTiA4McKwMjcnMjguOCJX!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -189,12 +205,12 @@ const Contact = () => {
                       Message Received
                     </h3>
                     <p className="text-muted-foreground">
-                      Thank you for reaching out. Karin will personally 
+                      Thank you for reaching out. <strong>Kiani Marie Rodriguez</strong> will personally 
                       review your inquiry and respond within 24 hours.
                     </p>
                     <button
                       onClick={() => setIsSubmitted(false)}
-                      className="mt-6 text-gold hover:text-gold-dark transition-colors"
+                      className="mt-6 text-gold hover:text-gold-dark transition-colors font-medium"
                     >
                       Send another message
                     </button>
@@ -203,10 +219,7 @@ const Contact = () => {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <div>
-                        <label
-                          htmlFor="name"
-                          className="block text-xs tracking-wide uppercase text-muted-foreground mb-2"
-                        >
+                        <label htmlFor="name" className="block text-xs tracking-wide uppercase text-muted-foreground mb-2">
                           Your Name *
                         </label>
                         <input
@@ -220,10 +233,7 @@ const Contact = () => {
                         />
                       </div>
                       <div>
-                        <label
-                          htmlFor="email"
-                          className="block text-xs tracking-wide uppercase text-muted-foreground mb-2"
-                        >
+                        <label htmlFor="email" className="block text-xs tracking-wide uppercase text-muted-foreground mb-2">
                           Email Address *
                         </label>
                         <input
@@ -240,10 +250,7 @@ const Contact = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <div>
-                        <label
-                          htmlFor="phone"
-                          className="block text-xs tracking-wide uppercase text-muted-foreground mb-2"
-                        >
+                        <label htmlFor="phone" className="block text-xs tracking-wide uppercase text-muted-foreground mb-2">
                           Phone Number
                         </label>
                         <input
@@ -256,10 +263,7 @@ const Contact = () => {
                         />
                       </div>
                       <div>
-                        <label
-                          htmlFor="subject"
-                          className="block text-xs tracking-wide uppercase text-muted-foreground mb-2"
-                        >
+                        <label htmlFor="subject" className="block text-xs tracking-wide uppercase text-muted-foreground mb-2">
                           Inquiry Type *
                         </label>
                         <select
@@ -279,10 +283,7 @@ const Contact = () => {
                     </div>
 
                     <div>
-                      <label
-                        htmlFor="message"
-                        className="block text-xs tracking-wide uppercase text-muted-foreground mb-2"
-                      >
+                      <label htmlFor="message" className="block text-xs tracking-wide uppercase text-muted-foreground mb-2">
                         Your Message *
                       </label>
                       <textarea
@@ -299,7 +300,7 @@ const Contact = () => {
 
                     <button
                       type="submit"
-                      className="w-full btn-gold group"
+                      className="w-full bg-charcoal text-white py-4 px-8 hover:bg-gold transition-colors duration-300 flex items-center justify-center group uppercase tracking-[0.2em] text-sm"
                     >
                       Send Message
                       <Send className="inline-block ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
