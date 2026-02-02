@@ -1,7 +1,14 @@
 import { useState } from "react";
-// Đã chuyển về import tiêu chuẩn để sửa lỗi "Module not found"
-import { motion } from "framer-motion"; 
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
+import { 
+  MapPin, 
+  Phone, 
+  Mail, 
+  Clock, 
+  Send, 
+  CheckCircle, 
+  User // Icon đại diện cho Personal Leader
+} from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 
 const Contact = () => {
@@ -16,6 +23,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Mô phỏng gửi form thành công
     setIsSubmitted(true);
     setFormData({
       name: "",
@@ -37,7 +45,7 @@ const Contact = () => {
 
   return (
     <Layout>
-      {/* Hero */}
+      {/* --- HERO SECTION --- */}
       <section className="pt-32 pb-16 bg-cream">
         <div className="container-luxury">
           <motion.div
@@ -47,7 +55,7 @@ const Contact = () => {
             className="text-center max-w-2xl mx-auto"
           >
             <span className="text-gold text-sm tracking-[0.3em] uppercase">
-              Personal Leader — Kiani Marie Rodriguez
+              Personal Concierge
             </span>
             <h1 className="font-heading text-5xl md:text-6xl text-charcoal mt-4 mb-6">
               Get in Touch
@@ -60,11 +68,12 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Content */}
+      {/* --- CONTACT CONTENT SECTION --- */}
       <section className="section-padding bg-cream-dark">
         <div className="container-luxury">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Contact Information */}
+            
+            {/* 1. CONTACT INFORMATION */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -72,71 +81,73 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
               className="space-y-10"
             >
-            <div>
-              <h2 className="font-heading text-3xl text-charcoal mb-2">
-                Visit The Atelier
-              </h2>
-              
-              {/* ĐOẠN ĐÃ NÂNG CẤP */}
-              <div className="flex items-center gap-4 mb-6">
-                <motion.div 
-                  initial={{ width: 0 }}
-                  whileInView={{ width: 48 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.5 }}
-                  className="h-[1px] bg-gold"
-                />
-                <p className="text-gold font-bold uppercase tracking-[0.25em] text-[11px]">
-                  Personal Leader: Kiani Marie Rodriguez
+              <div>
+                <h2 className="font-heading text-4xl text-charcoal mb-6">
+                  Visit The Atelier
+                </h2>
+                <p className="text-charcoal-light leading-relaxed">
+                  Our Syracuse showroom is open by appointment, offering a 
+                  carefully curated selection of our collection in an intimate 
+                  setting designed to inspire.
                 </p>
               </div>
-              {/* HẾT ĐOẠN NÂNG CẤP */}
 
-              <p className="text-charcoal-light leading-relaxed">
-                Our Syracuse showroom is open by appointment, offering a 
-                carefully curated selection of our collection in an intimate 
-                setting designed to inspire.
-              </p>
-            </div>
-
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-gold" />
+              {/* LIST INFO */}
+              <div className="space-y-8">
+                
+                {/* Personal Leader - Mục được làm to và nổi bật theo yêu cầu */}
+                <div className="flex items-start gap-5">
+                  <div className="w-14 h-14 bg-gold/15 rounded-full flex items-center justify-center flex-shrink-0 border border-gold/20">
+                    <User className="w-6 h-6 text-gold" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-charcoal mb-1">Address</h3>
-                    <p className="text-charcoal-light">
-                      San Paulo Way 911
-                      <br />
-                      Kissimmee Florida 34758
+                    <h3 className="text-xs uppercase tracking-widest text-gold font-bold mb-1">
+                      Personal Leader
+                    </h3>
+                    <p className="text-charcoal font-heading text-3xl tracking-tight">
+                      Kiani Marie Rodriguez
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-gold" />
+                {/* Address */}
+                <div className="flex items-start gap-5">
+                  <div className="w-14 h-14 bg-gold/15 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-gold" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-charcoal mb-1">Address</h3>
+                    <p className="text-charcoal-light">
+                      San Paulo Way 911, Kissimmee Florida 34758
+                    </p>
+                  </div>
+                </div>
+
+                {/* Phone */}
+                <div className="flex items-start gap-5">
+                  <div className="w-14 h-14 bg-gold/15 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-gold" />
                   </div>
                   <div>
                     <h3 className="font-medium text-charcoal mb-1">Phone</h3>
-                    <a
-                      href="tel:+19036500778"
-                      className="text-charcoal-light hover:text-gold transition-colors"
+                    <a 
+                      href="tel:+19036500778" 
+                      className="text-charcoal-light hover:text-gold transition-colors text-lg"
                     >
                       +1 (903) 650-0778
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-gold" />
+                {/* Email */}
+                <div className="flex items-start gap-5">
+                  <div className="w-14 h-14 bg-gold/15 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-gold" />
                   </div>
                   <div>
                     <h3 className="font-medium text-charcoal mb-1">Email</h3>
-                    <a
-                      href="mailto:leidyconkeluzt@hotmail.com"
+                    <a 
+                      href="mailto:leidyconkeluzt@hotmail.com" 
                       className="text-charcoal-light hover:text-gold transition-colors break-all"
                     >
                       leidyconkeluzt@hotmail.com
@@ -144,47 +155,43 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-gold" />
+                {/* Hours */}
+                <div className="flex items-start gap-5">
+                  <div className="w-14 h-14 bg-gold/15 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-gold" />
                   </div>
                   <div>
                     <h3 className="font-medium text-charcoal mb-1">Hours</h3>
                     <p className="text-charcoal-light">
-                      Monday – Friday: 10am – 6pm
-                      <br />
+                      Monday – Friday: 10am – 6pm <br />
                       Saturday: By Appointment
-                      <br />
-                      Sunday: Closed
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Map */}
-              <div className="aspect-video bg-cream border border-border overflow-hidden">
+              <div className="aspect-video bg-cream border border-border overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-700">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3516.432616428!2d-81.458!3d28.225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDEzJzMwLjAiTiA4McKwMjcnMjguOCJX!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3513.344405387431!2d-81.4727184!3d28.2872338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7836894ad691d%3A0x6a1651e707e7e59!2sSan%20Paulo%20Way%2C%20Kissimmee%2C%20FL%2034758!5e0!3m2!1sen!2sus!4v1700000000000"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
                   title="Kiani Atelier Location"
-                  className="grayscale"
                 />
               </div>
             </motion.div>
 
-            {/* Contact Form */}
+            {/* 2. CONTACT FORM */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="bg-cream p-8 lg:p-10">
+              <div className="bg-cream p-8 lg:p-10 shadow-sm border border-border/50">
                 <h2 className="font-heading text-3xl text-charcoal mb-2">
                   Send an Inquiry
                 </h2>
@@ -205,12 +212,11 @@ const Contact = () => {
                       Message Received
                     </h3>
                     <p className="text-muted-foreground">
-                      Thank you for reaching out. <strong>Kiani Marie Rodriguez</strong> will personally 
-                      review your inquiry and respond within 24 hours.
+                      Thank you for reaching out. <strong>Kiani Marie Rodriguez</strong> sẽ trực tiếp xem xét yêu cầu và phản hồi bạn trong vòng 24 giờ.
                     </p>
                     <button
                       onClick={() => setIsSubmitted(false)}
-                      className="mt-6 text-gold hover:text-gold-dark transition-colors font-medium"
+                      className="mt-6 text-gold hover:text-gold-dark transition-colors font-medium underline underline-offset-4"
                     >
                       Send another message
                     </button>
@@ -218,8 +224,8 @@ const Contact = () => {
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div>
-                        <label htmlFor="name" className="block text-xs tracking-wide uppercase text-muted-foreground mb-2">
+                      <div className="space-y-2">
+                        <label htmlFor="name" className="block text-xs tracking-widest uppercase text-muted-foreground">
                           Your Name *
                         </label>
                         <input
@@ -232,8 +238,8 @@ const Contact = () => {
                           className="w-full px-4 py-3 bg-cream-dark border border-border text-charcoal focus:outline-none focus:border-gold transition-colors"
                         />
                       </div>
-                      <div>
-                        <label htmlFor="email" className="block text-xs tracking-wide uppercase text-muted-foreground mb-2">
+                      <div className="space-y-2">
+                        <label htmlFor="email" className="block text-xs tracking-widest uppercase text-muted-foreground">
                           Email Address *
                         </label>
                         <input
@@ -249,8 +255,8 @@ const Contact = () => {
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div>
-                        <label htmlFor="phone" className="block text-xs tracking-wide uppercase text-muted-foreground mb-2">
+                      <div className="space-y-2">
+                        <label htmlFor="phone" className="block text-xs tracking-widest uppercase text-muted-foreground">
                           Phone Number
                         </label>
                         <input
@@ -262,8 +268,8 @@ const Contact = () => {
                           className="w-full px-4 py-3 bg-cream-dark border border-border text-charcoal focus:outline-none focus:border-gold transition-colors"
                         />
                       </div>
-                      <div>
-                        <label htmlFor="subject" className="block text-xs tracking-wide uppercase text-muted-foreground mb-2">
+                      <div className="space-y-2">
+                        <label htmlFor="subject" className="block text-xs tracking-widest uppercase text-muted-foreground">
                           Inquiry Type *
                         </label>
                         <select
@@ -282,8 +288,8 @@ const Contact = () => {
                       </div>
                     </div>
 
-                    <div>
-                      <label htmlFor="message" className="block text-xs tracking-wide uppercase text-muted-foreground mb-2">
+                    <div className="space-y-2">
+                      <label htmlFor="message" className="block text-xs tracking-widest uppercase text-muted-foreground">
                         Your Message *
                       </label>
                       <textarea
@@ -300,15 +306,14 @@ const Contact = () => {
 
                     <button
                       type="submit"
-                      className="w-full bg-charcoal text-white py-4 px-8 hover:bg-gold transition-colors duration-300 flex items-center justify-center group uppercase tracking-[0.2em] text-sm"
+                      className="w-full bg-charcoal text-white py-4 px-8 hover:bg-gold transition-all duration-300 flex items-center justify-center group uppercase tracking-[0.3em] text-xs font-bold"
                     >
                       Send Message
                       <Send className="inline-block ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
 
-                    <p className="text-xs text-muted-foreground text-center">
-                      By submitting this form, you agree to be contacted regarding 
-                      your inquiry. We respect your privacy.
+                    <p className="text-[10px] text-muted-foreground text-center uppercase tracking-wider">
+                      We respect your privacy. data is encrypted.
                     </p>
                   </form>
                 )}
